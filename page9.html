@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>寵物之島用戶回饋</title>
+    <meta name="description" content="這是小明的寵物之島用戶回饋">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        .card {
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .card-body p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 3em; 
+            line-height: 1.5em;
+        }
+        .card-footer {
+            font-size: 0.8em; 
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Navbar Here -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Navbar
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"> </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <a class="nav-link" href="page0.html">Home  <span class="sr-only">(current) </span> </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="page1.html">Page 1 自我介紹</a>
+                            <a class="dropdown-item" href="page2.html">Page 2 按鈕展示</a>
+                            <a class="dropdown-item" href="page3.html">Page 3 我最嚮往的生活</a>
+                            <a class="dropdown-item" href="page4.html">Page 4 寵物之島總覽</a>
+                            <a class="dropdown-item" href="page5.html">Page 5 寵物介紹</a>
+                            <a class="dropdown-item" href="page6.html">Page 6 寵物保健室</a>
+                            <a class="dropdown-item" href="page7.html">Page 7 寵物餐廳</a>
+                            <a class="dropdown-item" href="page8.html">Page 8 寵物商店</a>
+                            <a class="dropdown-item" href="page9.html">Page 9 用戶回饋</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Jumbotron Here -->
+        <main class="container mt-5">
+            <div class="jumbotron">
+                <div class="row">
+                    <h1 class="display-3">寵物之島用戶回饋</h1>
+                    <div class="col-md-4">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">姓名</label>
+                                <input type="text" class="form-control" id="name" placeholder="輸入您的姓名">
+                            </div>
+                            <div class="form-group">
+                                <label for="stars">推薦星數</label>
+                                <select class="form-control" id="stars">
+                                    <option>5</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="feedback">內文</label>
+                                <textarea class="form-control" id="feedback" rows="3" placeholder="輸入您的回饋"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary">送出</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="feedback-list" class="row mt-4"></div> <!-- 在這裡加載用戶回饋 -->
+        </main>
+        
+    </main>    
+    
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const feedbacks = [
+                { name: "王小美", stars: 5, content: "這裡的服務非常好，我的寵物很喜歡！", date: "2024-05-10" },
+                { name: "李大同", stars: 4, content: "員工非常友好，環境也很乾淨。", date: "2024-05-09" },
+                { name: "張力行", stars: 5, content: "完美的體驗，每個細節都很到位！", date: "2024-05-08" },
+                { name: "陳思瑤", stars: 3, content: "整體不錯，但價格稍高。", date: "2024-05-07" },
+                { name: "林芷儀", stars: 5, content: "我的狗狗在這裡受到了很好的照顧。", date: "2024-05-06" },
+                { name: "趙靜怡", stars: 2, content: "服務態度需要改進，感覺不太親切。", date: "2024-05-05" },
+                { name: "周星星", stars: 4, content: "設施完善，但希望能有更多活動。", date: "2024-05-04" },
+                { name: "吳心緯", stars: 5, content: "非常推薦，尤其是清潔度非常高。", date: "2024-05-03" },
+                { name: "劉德華", stars: 4, content: "服務好，環境佳，會再來的。", date: "2024-05-02" },
+                { name: "蔡依林", stars: 5, content: "這是我見過最好的寵物照顧服務！", date: "2024-05-01" }
+            ];
+        
+            const feedbackList = document.getElementById('feedback-list');
+        
+            feedbacks.forEach(feedback => {
+                let starsHtml = '';
+                for (let i = 0; i < feedback.stars; i++) {
+                    starsHtml += '<i class="fas fa-star"></i>';  // 使用 FontAwesome 的星星图标
+                }
+                for (let i = feedback.stars; i < 5; i++) {
+                    starsHtml += '<i class="far fa-star"></i>';  // 显示空星以填满五颗星
+                }
+        
+                const feedbackHTML = `
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">${feedback.name} ${starsHtml}</h5>
+                                <p class="card-text">${feedback.content}</p>
+                                <div class="card-footer text-muted text-right">${feedback.date}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                feedbackList.innerHTML += feedbackHTML;
+            });
+        });
+        </script>
+            
+        
+</body>
+</html>

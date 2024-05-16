@@ -1,71 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
+    <title>JavaScript功能</title>
+    <meta name="description" content="探索我最嚮往的生活">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
     <!-- Navbar Here -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Navbar
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"> </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <a class="nav-link" href="page0.html">Home  <span class="sr-only">(current) </span> </a>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="page1.html">Page 1 自我介紹</a>
-                        <a class="dropdown-item" href="page2.html">Page 2 按鈕展示</a>
-                        <a class="dropdown-item" href="page3.html">Page 3 興趣愛好</a>
-                        <a class="dropdown-item" href="page4.html">Page 4 旅行記錄</a>
-                        <a class="dropdown-item" href="page5.html">Page 5 家庭生活</a>
-                        <a class="dropdown-item" href="page6.html">Page 6 社交圈子</a>
-                        <a class="dropdown-item" href="page7.html">Page 7 健康生活</a>
-                        <a class="dropdown-item" href="page8.html">Page 8 學習進修</a>
-                        <a class="dropdown-item" href="page9.html">Page 9 今天天氣</a>
-                    </div>
-                </li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Navbar
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"> </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <a class="nav-link" href="page0.html">Home  <span class="sr-only">(current) </span> </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="page1.html">Page 1 自我介紹</a>
+                            <a class="dropdown-item" href="page2.html">Page 2 按鈕展示</a>
+                            <a class="dropdown-item" href="page3.html">Page 3 我最嚮往的生活</a>
+                            <a class="dropdown-item" href="page4.html">Page 4 寵物之島總覽</a>
+                            <a class="dropdown-item" href="page5.html">Page 5 寵物介紹</a>
+                            <a class="dropdown-item" href="page6.html">Page 6 寵物保健室</a>
+                            <a class="dropdown-item" href="page7.html">Page 7 寵物餐廳</a>
+                            <a class="dropdown-item" href="page8.html">Page 8 寵物商店</a>
+                            <a class="dropdown-item" href="page9.html">Page 9 用戶回饋</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <!-- Jumbotron Here -->
+        <div class="jumbotron">
+            <h1 class="display-3">Page 2 JavaScript 功能</h1>
+            <p class="lead">Bootstrap 的 Tooltip - 為元素添加工具提示</p>
+            <p class="lead">Bootstrap 的 Modal - 創建一個模態對話框</p>
         </div>
-    </nav>
+        <!-- Tooltip Button -->
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">游標放在上面</button>
 
-    <!-- Jumbotron Here -->
-    <div class="jumbotron">
-        <h1 class="display-3">Jumbo heading</h1>
-        <p class="lead">Jumbo helper text</p>
-        <hr class="my-2">
-        <p>More info</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-        </p>
-    </div>
-    <!-- Tooltip Button -->
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Hover over me!</button>
-
-    <!-- Modal Trigger Button -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-    </button>
+        <!-- Modal Trigger Button -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        點擊
+        </button>
+    </main>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">歡迎來到寵物之島</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Welcome to my website!
+                    請繼續參觀
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

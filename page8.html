@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>寵物商店</title>
+    <meta name="description" content="這是小明的寵物之島總覽之寵物商店">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .card-img-top {
+        width: 100%; 
+        height: 200px; 
+        object-fit: cover;
+        }
+        .bordered {
+            border: 1px solid #ccc;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 200px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Navbar
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"> </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <a class="nav-link" href="page0.html">Home  <span class="sr-only">(current) </span> </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="page1.html">Page 1 自我介紹</a>
+                            <a class="dropdown-item" href="page2.html">Page 2 按鈕展示</a>
+                            <a class="dropdown-item" href="page3.html">Page 3 我最嚮往的生活</a>
+                            <a class="dropdown-item" href="page4.html">Page 4 寵物之島總覽</a>
+                            <a class="dropdown-item" href="page5.html">Page 5 寵物介紹</a>
+                            <a class="dropdown-item" href="page6.html">Page 6 寵物保健室</a>
+                            <a class="dropdown-item" href="page7.html">Page 7 寵物餐廳</a>
+                            <a class="dropdown-item" href="page8.html">Page 8 寵物商店</a>
+                            <a class="dropdown-item" href="page9.html">Page 9 用戶回饋</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>  
+    </header>
+  
+
+    <main class="container mt-5">
+        <h1>Page 8 寵物商店 - 商品項目</h1>
+        <p class="lead">靜宜大學 資管二乙 Z123123 小明</p>
+        <hr>
+        <p>這邊會告訴你，在寵物之島中，你的寵物會需要哪些東西。</p>
+        
+        <div id="product-list" class="row"></div>
+        <!-- Bootstrap Carousel -->
+        
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const products = [
+                { img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTsi0Eg4N1ITW2tktjxQrO4pCfGb4eCDJwxB4IZSwmPqAfm5u2N5NTARKechjq0gPieRNFcCvzuQ4P7y1lwJcU0XKOHmj4O0u8oIZSLjw4EsAlxbx5_pyrDMrRMA6kwHB1dtoM6Gw&usqp=CAc", name: "高品質全營養狗糧", price: 999 },
+                { img: "https://m.media-amazon.com/images/I/71U+-bMvtiL._AC_SX679_.jpg", name: "口腔護理骨頭", price: 220 },
+                { img: "https://down-tw.img.susercontent.com/file/tw-11134207-7qukz-lkj8ao4hujrqe0", name: "軟床墊式狗窩", price: 399 },
+                { img: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98u-ltmsa79xvomn14", name: "薄荷貓草", price: 400 },
+                { img: "https://down-tw.img.susercontent.com/file/tw-11134207-23020-1mhs9ew0rvnvbe", name: "寵物枕頭", price: 49 },
+                { img: "https://img.pchome.com.tw/cs/items/DEAK5OA900FFD3Z/000001_1661318302.jpg", name: "逗貓機器人", price: 999 },
+                { img: "https://down-tw.img.susercontent.com/file/8ce0e4621ebfbed7fde530df01176765", name: "兔子跳台", price: 140 },
+                { img: "https://down-tw.img.susercontent.com/file/sg-11134201-22110-azq5o1s2wljv60", name: "兔子草墊", price: 49 },
+                { img: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98s-lqa36xdmoa2q30", name: "兔兔外出背包", price: 299 },
+                { img: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98w-ltw74fz8hqb378", name: "烏龜圓桶過濾", price: 1400 },
+                { img: "https://down-tw.img.susercontent.com/file/sg-11134201-7qvdv-lhug3xwiekr756", name: "龜專用缸", price: 699 },
+                { img: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98q-lonwiewz4dj0eb", name: "龜專用高鈣食物", price: 500 },
+            ];
+
+            const productList = document.getElementById('product-list');
+
+            products.forEach(product => {
+                const cardHTML = `
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card">
+                            <img src="${product.img}" class="card-img-top" alt="${product.name}">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">${product.name}</h5>
+                                <p class="card-text text-center">Price: $${product.price}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productList.innerHTML += cardHTML;
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
