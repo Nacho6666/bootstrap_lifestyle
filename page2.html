@@ -7,6 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .button-hover {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: wave-animation 2s ease-out;
+            border-radius: 10px;
+        }
+        
+        @keyframes wave-animation {
+            from {
+                transform: scale(0);
+                opacity: 1;
+            }
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        </style>
 </head>
 <body>
     <!-- Navbar Here -->
@@ -17,14 +43,11 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <a class="nav-link" href="page0.html">Home  <span class="sr-only">(current) </span> </a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link </a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="page1.html">Page 1 自我介紹</a>
-                            <a class="dropdown-item" href="page2.html">Page 2 按鈕展示</a>
+                            <a class="dropdown-item" href="page2.html">Page 2 寵物之島探險</a>
                             <a class="dropdown-item" href="page3.html">Page 3 我最嚮往的生活</a>
                             <a class="dropdown-item" href="page4.html">Page 4 寵物之島總覽</a>
                             <a class="dropdown-item" href="page5.html">Page 5 寵物介紹</a>
@@ -43,17 +66,18 @@
     <main>
         <!-- Jumbotron Here -->
         <div class="jumbotron">
-            <h1 class="display-3">Page 2 JavaScript 功能</h1>
-            <p class="lead">Bootstrap 的 Tooltip - 為元素添加工具提示</p>
-            <p class="lead">Bootstrap 的 Modal - 創建一個模態對話框</p>
+            <h1 class="display-3">Page 2 寵物之島探險</h1>
+            <p class="lead">發現我們的互動工具提示 - 讓你更了解寵物的小秘密</p>
+            <p class="lead">體驗互動模態對話框 - 探索寵物之島的神秘角落</p>
         </div>
-        <!-- Tooltip Button -->
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">游標放在上面</button>
 
         <!-- Modal Trigger Button -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        點擊
-        </button>
+        <div class="modal-footer">
+                <!-- Tooltip Button -->
+            <button type="button" class="btn btn-secondary button-hover" data-toggle="tooltip" data-placement="right" title="探索我們寵物商店" onclick="window.location.href='page8.html'">探索寵物商店</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='page3.html'">繼續</button>
+        </div>
+        
     </main>
 
     <!-- Modal -->
@@ -84,6 +108,20 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
-       </script>
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.button-hover').hover(function(e) {
+                var wave = $('<div class="wave-effect"></div>');
+                $(this).prepend(wave);
+                wave.css({
+                    left: e.pageX - $(this).offset().left - wave.width()/2,
+                    top: e.pageY - $(this).offset().top - wave.height()/2
+                }).on('animationend', function(){
+                    wave.remove();
+                });
+            });
+        });
+        </script>
 </body>
 </html>
